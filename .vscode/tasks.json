@@ -34,7 +34,7 @@
 				"cwd": "${workspaceFolder}/backend\\api"
 			}
 		},
-		{
+		/*{
 			"label": "clean release (functions)",
 			"command": "dotnet",
 			"args": [
@@ -49,7 +49,7 @@
 			"options": {
 				"cwd": "${workspaceFolder}/backend\\api"
 			}
-		},
+		},*/
 		{
 			"label": "publish (functions)",
 			"command": "dotnet",

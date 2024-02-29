@@ -9,9 +9,8 @@
         },
         {
             "name": "Attach to Python Functions",
-            "type": "python",
+            "type": "debugpy",
             "request": "attach",
-            "port": 9091,
             "preLaunchTask": "func: host start"
         }
     ]

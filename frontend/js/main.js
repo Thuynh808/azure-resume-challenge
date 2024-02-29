@@ -2,11 +2,11 @@
 window.addEventListener('DOMContentLoaded', (event) =>{
     getVisitCount();
 });
-
+const azurefunctionApi = 'https://resumecounterapi.azurewebsites.net/api/CounterAPI?';
 const functionApi = 'http://localhost:7071/api/CounterAPI';
 
 const getVisitCount = () => {
-    fetch(functionApi).then(response => {
+    fetch(azurefunctionApi).then(response => {
         if (!response.ok) {
             throw new Error('Network response error')
         }
