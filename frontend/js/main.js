@@ -1,19 +1,20 @@
 
-
 window.addEventListener('DOMContentLoaded', (event) =>{
     getVisitCount();
-})
+});
 
-const functionApi = '';
+const functionApi = 'http://localhost:7071/api/CounterAPI';
 
 const getVisitCount = () => {
-    let count = 30;
     fetch(functionApi).then(response => {
-        return response.json()
+        if (!response.ok) {
+            throw new Error('Network response error')
+        }
+        return response.json();
     }).then(response =>{
         console.log("Website called function API.");
-        count = response.count;
-        document.getElementById("counter").innerText = count;
+        count = response.visit_count;
+        document.getElementById("VisitCount").innerText = count;
     }).catch(function(error){
         console.log(error);
     });
