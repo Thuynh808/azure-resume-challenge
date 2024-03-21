@@ -3830,7 +3830,7 @@ img.u-pull-left {
 }
 
 .modal-popup__details {
-    background-color : rgb(4, 37, 22);
+    background-color : rgb(2, 15, 9);
     font-size        : var(--text-xs);
     line-height      : var(--vspace-1_25);
     color            : white;
