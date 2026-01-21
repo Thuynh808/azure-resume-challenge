@@ -12,6 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+    - name: Install and build frontend
+      working-directory: frontend
+      run: |
+        npm ci
+        npm run build
+
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.CREDENTIALS }}
@@ -20,7 +31,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name resumechallenge --auth-mode key -d '$web' -s frontend/ --overwrite
+            az storage blob upload-batch --account-name resumechallenge --auth-mode key -d '$web' -s frontend/dist --overwrite
 
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
