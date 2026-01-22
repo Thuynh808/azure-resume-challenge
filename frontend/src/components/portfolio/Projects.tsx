@@ -91,13 +91,6 @@ const ProjectCard = ({ project, index, onOpenModal }: ProjectCardProps) => {
             className="absolute inset-0 h-full w-full object-cover"
           />
 
-          {/* Gradient + fallback letter */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-            <span className="font-display text-2xl font-bold text-foreground/20">
-              {project.title.charAt(0)}
-            </span>
-          </div>
-
           {/* Overlay on hover */}
           <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span className="font-body text-sm text-accent flex items-center gap-2">
@@ -236,13 +229,6 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 alt={`${project.title} preview`}
                 className="absolute inset-0 h-full w-full object-cover"
               />
-
-              {/* Gradient + fallback overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-                <span className="font-display text-4xl font-bold text-foreground/20">
-                  {project.title.charAt(0)}
-                </span>
-              </div>
             </div>
 
             {/* Content */}
