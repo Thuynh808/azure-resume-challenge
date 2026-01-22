@@ -7,6 +7,7 @@ interface Project {
   id: string;
   title: string;
   category: string;
+  shortDescription: string;
   description: string;
   tags: string[];
   githubLink: string;
@@ -83,13 +84,7 @@ const ProjectCard = ({ project, index, onOpenModal }: ProjectCardProps) => {
         </div>
 
         {/* Image Container */}
-        <div className="relative aspect-video overflow-hidden bg-background-secondary">
-          {/* Project image */}
-          <img
-            src={project.image}
-            alt={`${project.title} preview`}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+        <div className="relative overflow-hidden bg-background-secondary">
 
           {/* Overlay on hover */}
           <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -101,23 +96,17 @@ const ProjectCard = ({ project, index, onOpenModal }: ProjectCardProps) => {
 
         {/* Content */}
         <div className="p-6">
-          <p className="font-body text-xs uppercase tracking-wider text-primary mb-2">
+          <p className="font-body text-s uppercase tracking-wider text-primary mb-2">
             {project.category}
           </p>
-          <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-accent transition-colors mb-4">
+          
+          <h3 className="font-display text-2xl font-semibold text-foreground group-hover:text-accent transition-colors mb-4">
             {project.title}
           </h3>
 
-          {/* GitHub link - stop propagation to prevent modal opening */}
-          <a
-            href={project.githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-2 text-sm text-foreground-muted hover:text-accent transition-colors"
-          >
-            View on GitHub <ExternalLink size={14} />
-          </a>
+          <p className="text-s text-foreground-muted leading-relaxed mb-4">
+            {project.shortDescription}
+          </p>
         </div>
 
         {/* Border glow on hover */}
@@ -209,7 +198,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-card border border-border rounded-2xl shadow-2xl"
+            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-card border border-border shadow-2xl"
           >
             {/* Close button */}
             <button
@@ -233,16 +222,16 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
             {/* Content */}
             <div className="p-6 md:p-8">
-              <h3 id="modal-title" className="font-display text-2xl font-bold text-foreground mb-4">
+              <h3 id="modal-title" className="font-display text-2xl font-bold text-foreground mb-3">
                 {project.title}
               </h3>
               
-              <p className="font-body text-foreground-muted leading-relaxed mb-6">
+              <p className="font-body text-foreground-muted leading-relaxed mb-4">
                 {project.description}
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -258,7 +247,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-display font-semibold rounded-lg hover:shadow-[0_0_30px_hsl(210_100%_55%_/_0.3)] transition-all duration-300"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-display font-semibold rounded-lg hover:shadow-[0_0_30px_hsl(210_100%_55%_/_0.3)] transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
