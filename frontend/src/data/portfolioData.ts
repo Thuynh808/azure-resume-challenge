@@ -97,14 +97,15 @@ export const projects = [
     image: "/images/capstone2x.gif",
   },
   {
-    id: "active-directory-lab",
-    title: "Active Directory Identity Lab",
-    category: "Identity & Access Management",
-    description: "Active Directory lab modeling enterprise identity fundamentals with a Windows Server 2019 Domain Controller and Windows 10 client. Implements AD DS, DNS, DHCP, NAT, OU design, and Group Policy enforcement. Includes Python-based bulk user provisioning to automate identity tasks and validate end-to-end authentication, policy application, and workstation behavior.",
-    shortDescription: "Enterprise-style Active Directory, DNS, DHCP, and Group Policy lab",
-    tags: ["Active Directory", "DNS & DHCP", "Group Policy", "Windows Server 2019", "Python Automation"],
-    githubLink: "https://github.com/Thuynh808/Active-Directory-Lab/blob/main/README.md",
-    image: "/images/active_directory2x.png",
+    id: "helpdesk-deception",
+    title: "Helpdesk Deception",
+    category: "Threat Hunting",
+    description:
+      "Hypothesis-driven threat hunt in Microsoft Sentinel and Defender for Endpoint analyzing suspicious helpdesk-labeled activity on an intern workstation. Correlated process, file, logon, and network telemetry to reconstruct a hands-on-keyboard session involving PowerShell execution from Downloads, host reconnaissance, outbound connectivity testing, artifact staging, and scheduled task persistence.",
+    shortDescription: "Timeline-driven threat hunt investigation and analysis report",
+    tags: ["Microsoft Sentinel", "Defender for Endpoint", "KQL Threat Hunting", "MITRE ATT&CK"],
+    githubLink: "https://github.com/Thuynh808/helpdesk-deception/blob/main/README.md",
+    image: "/images/help0.gif",
   },
   {
     id: "azure-release-verifier",
@@ -185,6 +186,16 @@ export const projects = [
     tags: ["Cloud Security", "AWS Infrastructure", "Terraform & Ansible", "Automation"],
     githubLink: "https://github.com/Thuynh808/Breach-Tracker/blob/main/README.md",
     image: "/images/Breach-Tracker2x.png",
+  },
+  {
+    id: "active-directory-lab",
+    title: "Active Directory Identity Lab",
+    category: "Identity & Access Management",
+    description: "Active Directory lab modeling enterprise identity fundamentals with a Windows Server 2019 Domain Controller and Windows 10 client. Implements AD DS, DNS, DHCP, NAT, OU design, and Group Policy enforcement. Includes Python-based bulk user provisioning to automate identity tasks and validate end-to-end authentication, policy application, and workstation behavior.",
+    shortDescription: "Active Directory, DNS, DHCP, and Group Policy lab",
+    tags: ["Active Directory", "DNS & DHCP", "Group Policy", "Windows Server 2019", "Python Automation"],
+    githubLink: "https://github.com/Thuynh808/Active-Directory-Lab/blob/main/README.md",
+    image: "/images/active_directory2x.png",
   },
 ];
 
