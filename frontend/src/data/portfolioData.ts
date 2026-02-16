@@ -97,15 +97,14 @@ export const projects = [
     image: "/images/capstone2x.gif",
   },
   {
-    id: "helpdesk-deception",
-    title: "Helpdesk Deception",
+    id: "crosscheck",
+    title: "Crosscheck",
     category: "Threat Hunting",
-    description:
-      "Hypothesis-driven threat hunt in Microsoft Sentinel and Defender for Endpoint analyzing suspicious helpdesk-labeled activity on an intern workstation. Correlated process, file, logon, and network telemetry to reconstruct a hands-on-keyboard session involving PowerShell execution from Downloads, host reconnaissance, outbound connectivity testing, artifact staging, and scheduled task persistence.",
-    shortDescription: "Timeline-driven threat hunt investigation and analysis report",
+    description: "Advanced multi-endpoint threat hunt in Microsoft Sentinel and Defender for Endpoint analyzing suspicious year-end HR access patterns. Reconstructed a coordinated hands-on-keyboard sequence involving PowerShell execution, sensitive compensation artifact access, archive staging, persistence mechanisms, outbound validation, and cross-system activity correlation.",
+    shortDescription: "Multi-endpoint HR data misuse investigation and reconstruction",
     tags: ["Microsoft Sentinel", "Defender for Endpoint", "KQL Threat Hunting", "MITRE ATT&CK"],
-    githubLink: "https://github.com/Thuynh808/helpdesk-deception/blob/main/README.md",
-    image: "/images/help0.gif",
+    githubLink: "https://github.com/Thuynh808/crosscheck/blob/main/README.md",
+    image: "/images/crosscheck0.png",
   },
   {
     id: "azure-release-verifier",
