@@ -103,7 +103,7 @@ export const projects = [
     description: "Advanced multi-endpoint threat hunt in Microsoft Sentinel and Defender for Endpoint analyzing suspicious year-end HR access patterns. Reconstructed a coordinated hands-on-keyboard sequence involving PowerShell execution, sensitive compensation artifact access, archive staging, persistence mechanisms, outbound validation, and cross-system activity correlation.",
     shortDescription: "Multi-endpoint HR data misuse investigation and reconstruction",
     tags: ["Microsoft Sentinel", "Defender for Endpoint", "KQL Threat Hunting", "MITRE ATT&CK"],
-    githubLink: "https://github.com/Thuynh808/crosscheck/blob/main/README.md",
+    githubLink: "https://github.com/Thuynh808/cyber-range-threat-hunts/blob/main/hunt-investigations/crosscheck.md",
     image: "/images/crosscheck0.png",
   },
   {
